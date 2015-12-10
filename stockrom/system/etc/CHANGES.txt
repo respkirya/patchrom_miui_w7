@@ -1,0 +1,163 @@
+===================================
+Since Sun Nov 15 09:03:58 UTC 2015
+===================================
+
+   * frameworks/native
+a82fb1e Disregard alleged binder entities beyond parcel bounds
+7d6f940 Update maxNumber to be smaller.
+33a5e13 Fix for corruption when numFds or numInts is too large.
+
+===================================
+Since Sun Nov  8 09:48:46 UTC 2015
+===================================
+
+   * bootable/recovery
+90afeeb Track usage of Vector / SortedVector from libutils DO NOT MERGE
+
+   * bootable/recovery-cm
+f34be06 Track usage of Vector / SortedVector from libutils DO NOT MERGE
+
+   * build
+63c4e1f DO NOT MERGE - Backport of ag/748221 - Security Patch Level in Settings CL#2/3
+
+   * external/skia
+b95b5cc SkScaledBitmapSampler: fix memory overwritten
+
+   * external/sonivox
+224d96d Check segments and libs
+1c56a7e Sonivox: check loopStart/loopLength against one specific wave, not whole wave pool.
+8cd7f81 Sonivox: fix overflow in Parse_data in eas_mdls.c
+ebe5523 Sonivox: make sure waveIndex is valid in Parse_rgn() in eas_mdls.c.
+
+   * external/sqlite
+a3aff41 sqlite: upgrade to patched SQLite 3.7.11 - DO NOT MERGE
+
+   * external/tremolo
+e5fb631 libvorbisidec: sanity check index of marker.
+84f7802 Fix vorbis decoder crash due to out of bounds memory access
+aec79a4 Fix allocation failure crash
+b6a2eee Add sanity checks to fix crash
+
+   * external/wpa_supplicant_8
+1c78404 NFC: Fix payload length validation in NDEF record parser
+6cd2401 WNM: Ignore Key Data in WNM Sleep Mode Response frame if no PMF in use
+d1106ab EAP-pwd peer: Fix last fragment length validation
+f1a1108 EAP-pwd server: Fix last fragment length validation
+77ebbf5 EAP-pwd peer: Fix error path for unexpected Confirm message
+4060a8f EAP-pwd peer: Fix asymmetric fragmentation behavior
+84b0fb9 EAP-pwd server: Fix Total-Length parsing for fragment reassembly
+dcf16cc EAP-pwd peer: Fix Total-Length parsing for fragment reassembly
+b80a22d EAP-pwd server: Fix payload length validation for Commit and Confirm
+9d163e3 EAP-pwd peer: Fix payload length validation for Commit and Confirm
+01d5bf8 AP WMM: Fix integer underflow in WMM Action frame parser
+a549bf5 WPS: Fix HTTP chunked transfer encoding parser
+
+   * frameworks/av
+92b4787 Fix heap data leak vulnerability
+5ce45a2 Fix for security vulnerability in media server DO NOT MERGE
+86570d2 DO NOT MERGE - IAudioFlinger: always initialize variables to ensure no info leak when writing them to Parcel.
+12a2014 Make IEffect command more robust (second try)
+d1acab9 libmedia: clear reply data for IEffect command
+ba1d568 Fix timedtext parsing
+064a7e4 DO NOT MERGE - libstagefright: sanity check size before dereferencing pointer in Utils.cpp
+879442a DO NOT MERGE fix build
+cc76163 DO NOT MERGE Avoid size_t overflow in base64 decoding once again
+bfa8b8d Ogg: avoid size_t overflow in base64 decoding
+b129e0d DO NOT MERGE - IAudioFlinger: clear config before reading it from parcel.
+ca36121 Zero out return values in media binder calls
+231e1d9 IMediaPlayer.cpp: make sure structures are initialized to 0
+07d491d stagefright: check IMemory::pointer() before using the allocation
+1a43e1e Fail more gracefully on allocation failure
+20bafbc Fix compile failure after rI431aa2b7d30a942350ab6d105451c6b77e2f99d4
+8c5c143 libstagefright: fix overflow in pvdec_api.cpp.
+23f57b6 libstagefright: check memory size for overflow before allocation.
+3036568 Fix for memory corruption in ID3::removeUnsynchronizationV2_4(). Bug: 23227354
+1d13da4 Fix build break DO NOT MERGE
+7485da5 Fix crash on malformed id3
+791804d libstagefright: fix possible overflow in amrwbenc.
+1ea4e5d DO NOT MERGE - audio flinger: fix fuzz test crash
+5fcaf16 DO NOT MERGE Part of fix for libmedia OOB write anywhere
+be85917 libstagefright: fix possible overflow in ID3.
+d79af09 Prevent integer issues in ID3::Iterator::findFrame
+7fec270 SampleTable: fix integer overflow checks.
+fc85b4d Extra sanity checks on sample size and resolution
+3fec328 libstagefright: check overflow before memory allocation in OMXCodec.cpp
+1add19b Sanity check padding/delay values for gapless playback
+57dd075 MatroskaExtractor: detect infinite loop when parsing NALs
+5263b0a DO NOT MERGE libstagefright: Fix crash in convertMetaDataToMessage
+cb87203 Fix Ogg album art
+8275b47 Fix comparison sign warnings.
+3d75bcf libstagefright: fix overflow in MPEG4Source::parseSampleAuxiliaryInformationOffsets.
+d87e881 MPEG4Extractor.cpp: Add check for size == SIZE_MAX
+a61ca48 Check RTSP payload length
+bed69c4 ABuffer: reset members when memory allocation fails.
+1bd3761 DO NOT MERGE - Fix software video decoder buffer size calculation
+e37fa84 DO NOT MERGE - SoftwareRenderer: sanity check buffer size before copying data.
+806c716 Check vector size before accessing
+39addd4 SoftAVCEnc: check requested memory size before allocation.
+85db3f0 Check buffer size before using it
+5396ca2 MPEG4Source::fragmentedRead: check range before writing into buffers
+adb0333 do not dequeue from native window after we hit fatal error -- DO NOT MERGE
+af8bd6e libstagefright: fix handling of mSampleTimeEntries and mNumSampleSizes in SampleTable.
+de62a60 libstagefright: check remaining data size before parsing it.
+749ffc9 Check integer overflow to prevent memory corruption
+273449c Guard against codecinfo overflow
+
+   * frameworks/base
+c7d9ada DO NOT MERGE - Backport of ag/748165 to klp-dev Security patch level in Settings
+d813014 Allow debugging only for apps forked from zygote DO NOT MERGE
+7f332ba DO NOT MERGE: Ensure that unparcelling Region only reads the expected number of bytes
+a09a739 Check that the parcel contained the expected amount of region data. DO NOT MERGE
+
+   * frameworks/native
+61998d4 Initialize local variables to avoid data leak
+
+   * frameworks/opt/telephony
+e54009e Externally-reported Moderate severity vulnerability in SMS: Apps can bypass the SMS short code notification prompt
+
+   * packages/apps/Bluetooth
+398e640 DO NOT MERGE Fix security vulnerabilities in permission of deleting MMS/SMS
+
+   * packages/apps/Settings
+15e214e Add translations for Security Patch Level.
+82e036d Present the security patch date in a human-friendly format
+f3fcb88 DO NOT MERGE - Backport of ag/748147 - Security Patch Level in Settings CL#3/3
+31739cb Check for special char when renaming device for Wi-Fi direct.
+
+   * system/core
+6bac0a9 libutils: Fix integer overflows in VectorImpl. DO NOT MERGE
+f49bbc4 Fix compile failure after rIfe1dc0791040150132bea6884f1e6c8d31972d1b
+f7a83e5 libutils: fix overflow in String8::allocFromUTF8
+c60568a libutils: fix overflow in SharedBuffer
+
+   * system/security
+4cf5c0d Properly check for Blob max length
+291aaf5 Fix unchecked length in Blob creation
+
+===================================
+Since Sun Oct  4 20:36:05 UTC 2015
+===================================
+
+   * packages/apps/LockClock
+e1bb691 LockClock : Add api key for open weather
+
+===================================
+Since Mon Sep  7 04:18:43 UTC 2015
+===================================
+
+   * android
+311a74d manifest: Remove vendor/cyngn repo
+
+   * frameworks/base
+9649fbc National roaming info for new Tuenti MNC in Spain
+
+   * vendor/cm
+4eea643 Add new Tuenti MNC SPN override name
+
+===================================
+Since Mon Aug 24 02:20:14 UTC 2015
+===================================
+
+   * vendor/cm
+4dd80f0 Updated APN settings for Latvian operators
+
